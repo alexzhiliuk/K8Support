@@ -1,0 +1,63 @@
+@mixin heading1 {
+    font-family: $fontPrimary;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 80px;
+    line-height: 1.025;
+}
+@mixin heading2 {
+    font-family: $fontPrimary;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 1.2;
+}
+@mixin heading3 {
+    font-family: $fontPrimary;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1.27;
+}
+@mixin heading4 {
+    font-family: $fontPrimary;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.25;
+}
+@mixin heading5 {
+    font-family: $fontPrimary;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.25;
+}
+@mixin heading5bolder {
+    font-family: $fontPrimary;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.25;
+}
+@mixin heading6 {
+    font-family: $fontPrimary;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+@mixin buttonTypo {
+    font-family: $fontPrimary;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+@mixin tagTypo {
+    font-family: $fontPrimary;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+}

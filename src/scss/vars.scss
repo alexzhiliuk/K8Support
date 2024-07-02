@@ -15,16 +15,19 @@ $breakpoint576: 575.98 + px;
 $breakpoint480: 479.98 + px;
 
 // Colors
-$contentPrimary: #1D2433;
-$contentDisabled: rgba(29, 36, 51, 0.65);
-$textPrimary: rgba(0, 0, 0, 0.85);
-$surfacePrimary: #FFF;
-$surfaceSecondary: #F8F9FC;
-$surfaceTertiary: #F1F3F9;
-$surfaceTertiaryInvert: #0A0D14;
-$redDefault: #E02D3C;
-$borderBase: #E1E6EF;
-$grey: #212121;
+$colorPrimary1: #326DE6;
+$colorPrimary2: #1F317D;
+$colorPrimary3: #FFFFFF;
+$colorSecondary1: #F3F7FC;
+$colorSecondary2: #DCE8F4;
+$colorSecondary3: #57659D;
+$gradientPrimary: linear-gradient(180deg, #FF9243 0%, #FF7C1D 100%);
+$gradientSecondary1: linear-gradient(180deg, #4CB0F9 0%, #326DE6 100%);
+$gradientSecondary2: linear-gradient(180deg, #224FAA 0%, #214286 100%);
+
+// Fonts
+$fontPrimary: gilroy;
+
 
 // Burger
 $burgerBreakpoint: $breakpoint992;
