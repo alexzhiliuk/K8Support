@@ -18,6 +18,15 @@
     margin: 0 auto;
     padding: 0 $containerPadding;
 
+    &_wide {
+        max-width: calc(1410px + 2 * 16px);
+        padding: 0 16px;
+
+        @media screen and (max-width: $breakpoint576) {
+            padding: 0 4px;
+        }
+    }
+
 }
 
 
