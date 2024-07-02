@@ -1,0 +1,113 @@
+.header {
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    // .header__wrapper
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        height: 56px;
+
+        @media screen and (max-width: $breakpoint576) {
+            height: 44px;
+        }
+    }
+
+    // .header__logo
+    &__logo {
+        height: 100%;
+
+        img {
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    // .header__nav
+    &__nav {
+        @media screen and (max-width: $breakpoint992) {
+            display: none;
+        }
+    }
+
+    // .header__list
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+
+        @media screen and (max-width: $breakpoint1200) {
+            gap: 30px;
+        }
+
+        a {
+            color: $colorPrimary2;
+            font-size: 16px;
+            font-weight: 500;
+
+            &:hover {
+                color: $colorPrimary1;
+            }
+        }
+    }
+
+    // .header__btn
+    &__btn {
+        @media screen and (max-width: $breakpoint992) {
+            display: none;
+        }
+    }
+
+    // .header__burger
+    &__burger {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background-color: $colorSecondary2;
+
+        span {
+            width: 20px;
+            height: 2px;
+            border-radius: 2px;
+            background-color: $colorPrimary2;
+
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: calc(100% + 3px);
+                right: 0;
+
+                height: 100%;
+                width: 100%;
+                border-radius: 2px;
+                background-color: $colorPrimary2;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: calc(100% + 3px);
+                right: 0;
+
+                height: 100%;
+                width: 60%;
+                border-radius: 2px;
+                background-color: $colorPrimary2;
+
+            }
+        }
+
+        @media screen and (max-width: $breakpoint992) {
+            display: flex;
+        }
+    }
+}

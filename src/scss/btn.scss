@@ -1,0 +1,56 @@
+.btn {
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    
+    color: $colorPrimary2;
+
+    // .btn_small
+    &_small {
+        height: 44px;
+        border-radius: 100px;
+        border: 2px solid $colorSecondary2;
+        padding: 7px 7px 7px 14px;
+        
+        font-size: 16px;
+        font-weight: 500;
+
+        .btn__arrow {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: $colorSecondary2;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &:hover {
+            border-color: $colorSecondary3;
+
+            .btn__arrow {
+                background-color: $colorPrimary2;
+
+                svg path {
+                    stroke: $colorPrimary3;
+                }
+            }
+        }
+
+        &:active {
+            border-color: transparent;
+            background-color: $colorPrimary2;
+            color: $colorPrimary3;
+
+            .btn__arrow {
+                background-color: $colorPrimary3;
+
+                svg path {
+                    stroke: $colorPrimary2;
+                }
+            }
+        }
+    }
+}
