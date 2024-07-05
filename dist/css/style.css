@@ -385,7 +385,7 @@ template {
   font-family: gilroy;
   font-style: normal;
   font-weight: 500;
-  font-size: 80px;
+  font-size: clamp(38px, 8vw, 80px);
   line-height: 1.025;
 }
 
@@ -748,6 +748,225 @@ button {
   align-items: center;
   justify-content: center;
   border: 2px solid #DCE8F4;
+}
+
+.hero {
+  background: linear-gradient(180deg, #224FAA 0%, #214286 100%);
+  border-radius: 30px;
+  padding: 80px 65px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 767.98px) {
+  .hero {
+    padding: 40px 10px;
+    align-items: center;
+    padding-bottom: 470px;
+  }
+}
+.hero_index .hero__bg {
+  position: absolute;
+  bottom: -25%;
+  right: -150px;
+  width: 75%;
+  aspect-ratio: 1;
+  pointer-events: none;
+  user-select: none;
+  mix-blend-mode: plus-lighter;
+  opacity: 0.45;
+}
+.hero_index .hero__bg img {
+  width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 767.98px) {
+  .hero_index .hero__bg {
+    max-width: 722px;
+    width: 200%;
+    left: 50%;
+    translate: -50%;
+    bottom: -20%;
+  }
+}
+.hero_index .hero__stars {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  width: 62%;
+  pointer-events: none;
+  user-select: none;
+}
+.hero_index .hero__stars img {
+  width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 767.98px) {
+  .hero_index .hero__stars {
+    width: 83%;
+    right: 50%;
+    translate: 50%;
+  }
+}
+.hero__title {
+  color: #FFFFFF;
+}
+.hero__title span {
+  color: #FF9243;
+  background: linear-gradient(180deg, #FF9243 0%, #FF7C1D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+@media screen and (max-width: 767.98px) {
+  .hero__title {
+    text-align: center;
+  }
+}
+.hero__text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #FFFFFF;
+  opacity: 0.6;
+  margin-top: 18px;
+  max-width: 404px;
+  width: 100%;
+}
+@media screen and (max-width: 767.98px) {
+  .hero__text {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 8px;
+    text-align: center;
+  }
+}
+.hero__btn {
+  margin-top: 74px;
+  display: flex;
+  position: relative;
+  z-index: 1;
+}
+@media screen and (max-width: 767.98px) {
+  .hero__btn {
+    margin-top: 24px;
+  }
+}
+.hero__btn .circle {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: -0.02em;
+  color: #1F317D;
+  position: relative;
+}
+.hero__btn .circle:first-of-type {
+  background-color: #FFFFFF;
+  z-index: 1;
+}
+.hero__btn .circle:first-of-type span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+@media screen and (max-width: 767.98px) {
+  .hero__btn .circle:first-of-type span {
+    gap: 3px;
+  }
+}
+.hero__btn .circle:last-of-type {
+  z-index: 0;
+  border: 1px solid #2254B9;
+  translate: -28%;
+  position: relative;
+}
+.hero__btn .circle:last-of-type span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.hero__btn .circle:last-of-type .circle-border {
+  position: absolute;
+  top: -8px;
+  bottom: -8px;
+  left: -8px;
+  right: -8px;
+}
+.hero__btn .circle:last-of-type .circle-border path {
+  stroke: #3869CD;
+  fill: none;
+  stroke-width: 0.5px;
+}
+@media screen and (max-width: 767.98px) {
+  .hero__btn .circle {
+    width: 100px;
+    height: 100px;
+    font-size: 16px;
+  }
+}
+.hero-card {
+  position: absolute;
+  bottom: 60px;
+  right: 60px;
+  z-index: 2;
+  box-shadow: 0px 4px 20px rgba(144, 153, 193, 0.12);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 35px 30px;
+  background: rgba(255, 255, 255, 0.07);
+  max-width: 330px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+.hero-card .btn {
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.15);
+}
+.hero-card .btn__arrow {
+  background: rgba(255, 255, 255, 0.1);
+}
+.hero-card .btn__arrow svg path {
+  stroke: #FFFFFF;
+}
+@media screen and (max-width: 767.98px) {
+  .hero-card {
+    max-width: 265px;
+    right: 50%;
+    translate: 50%;
+    padding: 20px;
+    align-items: center;
+  }
+}
+.hero-card__text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #FFFFFF;
+  opacity: 0.6;
+}
+@media screen and (max-width: 767.98px) {
+  .hero-card__text {
+    font-size: 14px;
+    line-height: 20px;
+    opacity: 1;
+    text-align: center;
+  }
 }
 
 @font-face {

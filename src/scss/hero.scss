@@ -1,0 +1,264 @@
+.hero {
+
+    background: $gradientSecondary2;
+    border-radius: 30px;
+    padding: 80px 65px;
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: $breakpoint768) {
+        padding: 40px 10px;
+        align-items: center;
+        padding-bottom: 470px;
+    }
+
+    // .hero_index
+    &_index {
+        
+        .hero__bg {
+
+            position: absolute;
+            bottom: -25%;
+            right: -150px;
+            width: 75%;
+            aspect-ratio: 1;
+            pointer-events: none;
+            user-select: none;
+
+            mix-blend-mode: plus-lighter;
+            opacity: 0.45;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            @media screen and (max-width: $breakpoint768) {
+                max-width: 722px;
+                width: 200%;
+                left: 50%;
+                translate: -50%;
+                bottom: -20%
+            }
+
+        }
+
+        .hero__stars {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            width: 62%;
+            pointer-events: none;
+            user-select: none;
+            
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            @media screen and (max-width: $breakpoint768) {
+                width: 83%;
+                right: 50%;
+                translate: 50%;
+            }
+        }
+    }
+
+    // .hero__title
+    &__title {
+        color: $colorPrimary3;
+        
+        span {
+            color: $orange;
+
+            background: $gradientPrimary;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        @media screen and (max-width: $breakpoint768) {
+            text-align: center;
+        }
+    }
+
+    // .hero__text
+    &__text {
+
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+        color: $colorPrimary3;
+        opacity: 0.6;
+
+        margin-top: 18px;
+        max-width: 404px;
+        width: 100%;
+
+        @media screen and (max-width: $breakpoint768) {
+            font-size: 14px;
+            line-height: 20px;
+            margin-top: 8px;
+            text-align: center;
+        }
+
+    }
+
+    // .hero__btn
+    &__btn {
+        margin-top: 74px;
+        display: flex;
+        position: relative;
+        z-index: 1;
+
+        @media screen and (max-width: $breakpoint768) {
+            margin-top: 24px;
+        }
+    
+
+        .circle {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 1.56;
+            letter-spacing: -0.02em;
+            color: $colorPrimary2;
+            
+            position: relative;
+
+            &:first-of-type {
+                background-color: $colorPrimary3;
+                z-index: 1;
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+
+                    @media screen and (max-width: $breakpoint768) {
+                        gap: 3px;
+                    }
+                }
+            }
+            
+            &:last-of-type {
+                z-index: 0;
+                border: 1px solid #2254B9;
+                translate: -28%;
+                position: relative;
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                }
+
+                .circle-border {
+                    position: absolute;
+                    top: -8px;
+                    bottom: -8px;
+                    left: -8px;
+                    right: -8px;
+
+                    path {
+                        stroke: #3869CD;
+                        fill: none;
+                        stroke-width: .5px;
+                    }
+                }
+            }
+
+            @media screen and (max-width: $breakpoint768) {
+                width: 100px;
+                height: 100px;
+                font-size: 16px;
+            }
+
+        }
+
+    }
+
+    // .hero__bg
+    &__bg {
+    }
+}
+
+.hero-card {
+
+    position: absolute;
+    bottom: 60px;
+    right: 60px;
+    z-index: 2;
+    
+    box-shadow: 0px 4px 20px rgba(144, 153, 193, 0.12);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 35px 30px;
+    background: rgba($color: $colorPrimary3, $alpha: .07);
+    
+    max-width: 330px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+
+    .btn {
+        color: $colorPrimary3;
+        border-color: rgba($color: $colorPrimary3, $alpha: .15);
+
+        &__arrow {
+            background: rgba($color: $colorPrimary3, $alpha: .1);
+
+            svg {
+                path {
+                    stroke: $colorPrimary3;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: $breakpoint768) {
+        max-width: 265px;
+        right: 50%;
+        translate: 50%;
+        padding: 20px;
+        align-items: center;
+    }
+
+    // .hero-card__text
+    &__text {
+        
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #FFFFFF;
+        opacity: 0.6;
+
+
+        @media screen and (max-width: $breakpoint768) {
+            font-size: 14px;
+            line-height: 20px;
+            opacity: 1;
+            text-align: center;
+        }
+
+    }
+}
