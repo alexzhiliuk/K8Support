@@ -2,6 +2,8 @@
 
     padding-top: 10px;
     padding-bottom: 10px;
+    position: relative;
+    z-index: $headerLayer;
 
     // .header__wrapper
     &__wrapper {
@@ -106,8 +108,34 @@
             }
         }
 
+        &_active {
+            span {
+                background-color: transparent;
+
+                &::before {
+                    rotate: -45deg;
+                    bottom: 50%;
+                    translate: 0 50%;
+                }
+    
+                &::after {    
+                    width: 100%;
+                    rotate: 45deg;
+                    top: 50%;
+                    translate: 0 -50%;
+                }
+            }
+        }
+
         @media screen and (max-width: $breakpoint992) {
             display: flex;
+        }
+    }
+
+    // .header__mobile-menu
+    &__mobile-menu {
+        @media screen and (min-width: $breakpoint992) {
+            display: none;
         }
     }
 }

@@ -6,6 +6,16 @@
     
     color: $colorPrimary2;
 
+    // .btn__arrow
+    &__arrow {
+        background: $colorSecondary2;
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     // .btn_small
     &_small {
         height: 44px;
@@ -19,12 +29,6 @@
         .btn__arrow {
             width: 30px;
             height: 30px;
-            border-radius: 50%;
-            background-color: $colorSecondary2;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         &:hover {
@@ -49,6 +53,46 @@
 
                 svg path {
                     stroke: $colorPrimary2;
+                }
+            }
+        }
+    }
+
+    // .btn_orange
+    &_orange {
+        
+        .btn__arrow {
+            background: $gradientPrimary; 
+            
+            svg {
+                path {
+                    stroke: $colorPrimary3;
+                }
+            }
+        }
+
+        &:hover {
+            border-color: #FF9243;
+
+            .btn__arrow {
+                background: $gradientPrimary;
+
+                svg path {
+                    stroke: $colorPrimary3;
+                }
+            }
+        }
+
+        &:active {
+            border-color: transparent;
+            background: $gradientPrimary;
+            color: $colorPrimary3;
+
+            .btn__arrow {
+                background: $colorPrimary3;
+
+                svg path {
+                    stroke: #FF9243;
                 }
             }
         }
