@@ -44,6 +44,14 @@ body {
     justify-content: space-between;
 }
 
+main {
+    padding-top: 76px;
+
+    @media screen and (max-width: $breakpoint576) {
+        padding-top: 64px;
+    }
+}
+
 ul {
     list-style-type: none;
 }

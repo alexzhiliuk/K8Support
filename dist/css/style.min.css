@@ -473,6 +473,15 @@ body {
   justify-content: space-between;
 }
 
+main {
+  padding-top: 76px;
+}
+@media screen and (max-width: 575.98px) {
+  main {
+    padding-top: 64px;
+  }
+}
+
 ul {
   list-style-type: none;
 }
@@ -567,8 +576,12 @@ button {
 .header {
   padding-top: 10px;
   padding-bottom: 10px;
-  position: relative;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
   z-index: 9;
+  background: #FFFFFF;
 }
 .header__wrapper {
   display: flex;
@@ -677,7 +690,7 @@ button {
   left: 0;
   right: 0;
   bottom: 0;
-  top: 76px;
+  height: calc(100dvh - 56px - 10px - 10px);
   translate: 100%;
   background: linear-gradient(106.29deg, #224FAA 15.91%, #214286 98.38%);
   overflow-x: hidden;
@@ -694,13 +707,12 @@ button {
 }
 .mobile-menu::after {
   content: "";
-  position: fixed;
-  width: 128vw;
-  aspect-ratio: 1;
+  position: absolute;
+  left: 0;
+  width: 100%;
   bottom: 0;
-  left: 50%;
-  translate: -50% 50%;
-  background: url(../img/mobile-menu/bg.png) 0 0/100% auto no-repeat;
+  height: 230px;
+  background: url(../img/mobile-menu/bg.png) center top/480px auto no-repeat;
   pointer-events: none;
   z-index: -1;
 }
@@ -710,6 +722,11 @@ button {
 @media screen and (min-width: 991.98px) {
   .mobile-menu {
     display: none;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .mobile-menu {
+    height: calc(100dvh - 44px - 10px - 10px);
   }
 }
 .mobile-menu__nav {

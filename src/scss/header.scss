@@ -2,8 +2,11 @@
 
     padding-top: 10px;
     padding-bottom: 10px;
-    position: relative;
+    position: fixed;
+    left: 0;right: 0;top: 0;
     z-index: $headerLayer;
+    background: $colorPrimary3;
+
 
     // .header__wrapper
     &__wrapper {
