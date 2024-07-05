@@ -134,8 +134,6 @@
 
     // .header__mobile-menu
     &__mobile-menu {
-        @media screen and (min-width: $breakpoint992) {
-            display: none;
-        }
+        
     }
 }

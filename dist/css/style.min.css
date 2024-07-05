@@ -672,12 +672,6 @@ button {
     display: flex;
   }
 }
-@media screen and (min-width: 991.98px) {
-  .header__mobile-menu {
-    display: none;
-  }
-}
-
 .mobile-menu {
   position: fixed;
   left: 0;
@@ -712,6 +706,11 @@ button {
 }
 .mobile-menu_active {
   translate: 0;
+}
+@media screen and (min-width: 991.98px) {
+  .mobile-menu {
+    display: none;
+  }
 }
 .mobile-menu__nav {
   margin-top: auto;

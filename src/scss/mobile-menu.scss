@@ -39,6 +39,10 @@
         translate: 0;
     }
 
+    @media screen and (min-width: $breakpoint992) {
+        display: none;
+    }
+
     // .mobile-menu__nav
     &__nav {
         margin-top: auto;
