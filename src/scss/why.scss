@@ -1,0 +1,25 @@
+.why {
+
+    &__text {
+        
+        font-style: normal;
+        font-weight: 500;
+        font-size: clamp(14px, 1.8vw, 18px);
+        line-height: 1.67;
+        color: $colorSecondary3;
+
+        strong {
+            color: $colorPrimary2;
+        }
+    }
+
+    &__btn {
+        max-width: fit-content;
+        margin-top: 40px;
+        margin-left: -14px;
+
+        @media screen and (max-width: $breakpoint1200) {
+            margin-top: 14px;
+        }
+    }
+}

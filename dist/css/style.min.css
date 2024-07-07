@@ -573,10 +573,50 @@ button {
 .btn_orange:active .btn__arrow svg path {
   stroke: #FF9243;
 }
+.btn_border_none {
+  border: none;
+}
 
 .section {
   margin-bottom: clamp(50px, 10vw, 100px);
   margin-top: clamp(50px, 10vw, 100px);
+}
+.section_row {
+  display: flex;
+  gap: clamp(40px, 4vw, 60px);
+}
+.section_row .section__header {
+  padding-top: 32px;
+}
+@media screen and (max-width: 1199.98px) {
+  .section_row .section__header {
+    padding-top: 0;
+  }
+}
+.section_row .section__body {
+  margin-top: 15px;
+}
+@media screen and (max-width: 1199.98px) {
+  .section_row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.section_bg {
+  padding: 80px 65px;
+  border-radius: 20px;
+  background: #FFFFFF;
+  filter: drop-shadow(0px 4px 20px rgba(144, 153, 193, 0.12));
+}
+@media screen and (max-width: 1199.98px) {
+  .section_bg {
+    padding: 50px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .section_bg {
+    padding: 35px 15px 15px;
+  }
 }
 .section__header_centered {
   text-align: center;
@@ -586,7 +626,6 @@ button {
   font-weight: 500;
   font-size: clamp(12px, 1.4vw, 14px);
   line-height: 1.57;
-  text-align: center;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #57659D;
@@ -601,6 +640,24 @@ button {
 }
 .section__body {
   margin-top: clamp(30px, 6vw, 60px);
+}
+.section__content {
+  flex: 1 1;
+}
+.section__img {
+  flex: 0 1 530px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.section__img img {
+  width: 100%;
+}
+@media screen and (max-width: 1199.98px) {
+  .section__img {
+    flex: unset;
+    order: 2;
+    max-width: 530px;
+  }
 }
 
 .header {
@@ -1097,6 +1154,27 @@ button {
   line-height: 1.5;
   color: #57659D;
   margin-top: 1em;
+}
+
+.why__text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: clamp(14px, 1.8vw, 18px);
+  line-height: 1.67;
+  color: #57659D;
+}
+.why__text strong {
+  color: #1F317D;
+}
+.why__btn {
+  max-width: fit-content;
+  margin-top: 40px;
+  margin-left: -14px;
+}
+@media screen and (max-width: 1199.98px) {
+  .why__btn {
+    margin-top: 14px;
+  }
 }
 
 @font-face {

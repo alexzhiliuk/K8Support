@@ -3,6 +3,46 @@
     margin-bottom: clamp(50px, 10vw, 100px);
     margin-top: clamp(50px, 10vw, 100px);
 
+    &_row {
+        display: flex;
+        gap: clamp(40px, 4vw, 60px);
+
+        .section {
+            &__header {
+                padding-top: 32px;
+
+                @media screen and (max-width: $breakpoint1200) {
+                    padding-top: 0;
+                }
+            }
+
+            &__body {
+                margin-top: 15px;
+            }
+        }
+
+        @media screen and (max-width: $breakpoint1200) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &_bg {
+        padding: 80px 65px;
+        border-radius: 20px;
+        background: $colorPrimary3;   
+
+        filter: drop-shadow(0px 4px 20px rgba(144, 153, 193, 0.12));
+
+        @media screen and (max-width: $breakpoint1200) {
+            padding: 50px;
+        }
+     
+        @media screen and (max-width: $breakpoint768) {
+            padding: 35px 15px 15px;
+        }
+    }
+
     // .section__header
     &__header {
 
@@ -19,7 +59,6 @@
         font-weight: 500;
         font-size: clamp(12px, 1.4vw, 14px);
         line-height: 1.57;
-        text-align: center;
         letter-spacing: 0.1em;
         text-transform: uppercase;
         color: $colorSecondary3;
@@ -39,5 +78,27 @@
     // .section__body
     &__body {
         margin-top: clamp(30px, 6vw, 60px);
+    }
+
+    // .section__content
+    &__content {
+        flex: 1 1;
+    }
+
+    // .section__img
+    &__img {
+        flex: 0 1 530px;
+        border-radius: 20px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
+
+        @media screen and (max-width: $breakpoint1200) {
+            flex: unset;
+            order: 2;
+            max-width: 530px;
+        }
     }
 }
