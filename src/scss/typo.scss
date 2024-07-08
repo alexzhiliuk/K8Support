@@ -23,7 +23,7 @@
     font-family: $fontPrimary;
     font-style: normal;
     font-weight: 600;
-    font-size: 24px;
+    font-size: clamp(19px, 2.4vw, 24px);
     line-height: 1.25;
 }
 @mixin heading5 {

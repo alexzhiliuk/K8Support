@@ -76,6 +76,15 @@
         text-fill-color: transparent;
     }
 
+    // .section__title-wrapper
+    &__title-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
     // .section__body
     &__body {
         margin-top: clamp(30px, 6vw, 60px);
