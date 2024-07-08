@@ -4,7 +4,13 @@
     align-items: center;
     gap: 12px;
     
+    height: 60px;
+    border-radius: 90px;
+    border: 2px solid $colorSecondary2;
     color: $colorPrimary2;
+    @include buttonTypo;
+
+    padding: 7px 7px 7px 25px;
 
     // .btn__arrow
     &__arrow {
@@ -14,13 +20,20 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        width: 40px;
+        height: 40px;
+
+        svg {
+            width: 33%;
+            height: auto;
+        }
     }
 
     // .btn_small
     &_small {
         height: 44px;
         border-radius: 100px;
-        border: 2px solid $colorSecondary2;
         padding: 7px 7px 7px 14px;
         
         font-size: 16px;

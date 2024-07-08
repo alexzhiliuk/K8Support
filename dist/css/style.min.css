@@ -506,7 +506,15 @@ button {
   display: flex;
   align-items: center;
   gap: 12px;
+  height: 60px;
+  border-radius: 90px;
+  border: 2px solid #DCE8F4;
   color: #1F317D;
+  font-family: gilroy;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 7px 7px 7px 25px;
 }
 .btn__arrow {
   background: #DCE8F4;
@@ -514,11 +522,16 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+.btn__arrow svg {
+  width: 33%;
+  height: auto;
 }
 .btn_small {
   height: 44px;
   border-radius: 100px;
-  border: 2px solid #DCE8F4;
   padding: 7px 7px 7px 14px;
   font-size: 16px;
   font-weight: 500;
@@ -1228,6 +1241,139 @@ button {
 @media screen and (max-width: 1199.98px) {
   .why__btn {
     margin-top: 14px;
+  }
+}
+
+.plans {
+  display: flex;
+  gap: 20px;
+}
+.plans > * {
+  flex: 1 1;
+}
+@media screen and (max-width: 1199.98px) {
+  .plans {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .plans {
+    gap: 10px;
+  }
+}
+
+.plan {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  border: 2px solid #E7F0F8;
+  padding: 25px 40px 50px;
+}
+.plan_blue {
+  background: linear-gradient(180deg, #4CB0F9 0%, #326DE6 100%);
+  border: unset;
+}
+.plan_blue .plan__title {
+  color: #FFFFFF;
+}
+.plan_blue .plan__text {
+  color: #FFFFFF;
+  opacity: 0.75;
+}
+.plan_blue .plan__list {
+  color: #FFFFFF;
+  opacity: 0.75;
+}
+.plan_blue .plan__btn {
+  background: #FFFFFF;
+  border-color: #FFFFFF;
+}
+.plan_blue .plan__btn:hover, .plan_blue .plan__btn:active {
+  background: linear-gradient(180deg, #FF9243 0%, #FF7C1D 100%);
+  border-color: #FF9243;
+}
+.plan_blue.plan hr {
+  background-color: rgba(231, 240, 248, 0.15);
+}
+@media screen and (max-width: 1199.98px) {
+  .plan {
+    padding: 25px;
+  }
+}
+.plan__title {
+  color: #1F317D;
+}
+.plan__text {
+  font-family: gilroy;
+  font-style: normal;
+  font-weight: 500;
+  font-size: clamp(14px, 1.6vw, 16px);
+  line-height: 1.5;
+  color: #57659D;
+  margin-top: 1em;
+}
+.plan__list {
+  font-family: gilroy;
+  font-style: normal;
+  font-weight: 500;
+  font-size: clamp(14px, 1.6vw, 16px);
+  line-height: 1.5;
+  color: #57659D;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+.plan__list li {
+  position: relative;
+  padding-left: calc(clamp(16px, 2.2vw, 22px) + 15px);
+}
+.plan__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: clamp(16px, 2.2vw, 22px);
+  height: clamp(16px, 2.2vw, 22px);
+  background: url(../img/plans/marker.svg) center/contain no-repeat;
+}
+@media screen and (max-width: 767.98px) {
+  .plan__list li {
+    padding-left: calc(clamp(16px, 2.2vw, 22px) + 10px);
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .plan__list {
+    margin-bottom: 20px;
+  }
+}
+.plan__btn {
+  max-width: fit-content;
+  margin-top: auto;
+}
+@media screen and (max-width: 767.98px) {
+  .plan__btn {
+    font-size: 16px;
+    height: 40px;
+    padding: 7px 7px 7px 18px;
+  }
+  .plan__btn .btn__arrow {
+    width: 26px;
+    height: 26px;
+  }
+}
+.plan hr {
+  border: none;
+  outline: none;
+  height: 1px;
+  background-color: #E7F0F8;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 1199.98px) {
+  .plan hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 }
 

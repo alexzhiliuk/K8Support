@@ -1,0 +1,141 @@
+.plans {
+    display: flex;
+    gap: 20px;
+
+    & > * {
+        flex: 1 1;
+    }
+
+    @media screen and (max-width: $breakpoint1200) {
+        flex-direction: column;
+    }
+    @media screen and (max-width: $breakpoint768) {
+        gap: 10px;
+    }
+}
+.plan {
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 20px;
+    border: 2px solid #E7F0F8;
+    padding: 25px 40px 50px;
+
+    &_blue {
+        background: $gradientSecondary1;
+        border: unset;
+
+        .plan {
+
+            &__title {
+                color: $colorPrimary3;
+            }
+
+            &__text {
+                color: $colorPrimary3;
+                opacity: .75;
+            }
+
+            &__list {
+                color: $colorPrimary3;
+                opacity: .75;
+            }
+
+            &__btn {
+                background: $colorPrimary3;
+                border-color: $colorPrimary3;
+
+                &:hover,
+                &:active {
+                    background: $gradientPrimary;
+                    border-color: $orange;
+                }
+            }
+        }
+
+
+        &.plan hr {
+            background-color: rgba($color: #E7F0F8, $alpha: .15);
+        }
+    }
+
+    @media screen and (max-width: $breakpoint1200) {
+        padding: 25px;
+    }
+
+    // .plan__title
+    &__title {
+        color: $colorPrimary2
+    }
+
+    // .plan__text
+    &__text {
+        @include mainText;
+        margin-top: 1em;
+    }
+
+    // .plan__list
+    &__list {
+        @include mainText;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 40px;
+
+        li {
+            position: relative;
+            padding-left: calc(clamp(16px, 2.2vw, 22px) + 15px);
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: clamp(16px, 2.2vw, 22px);
+                height: clamp(16px, 2.2vw, 22px);
+                background: url(../img/plans/marker.svg) center / contain no-repeat;
+            }
+
+            @media screen and (max-width: $breakpoint768) {
+                padding-left: calc(clamp(16px, 2.2vw, 22px) + 10px);
+            }
+        }
+
+        @media screen and (max-width: $breakpoint768) {
+            margin-bottom: 20px;
+        }
+
+    }
+
+    // .plan__btn
+    &__btn {
+        max-width: fit-content;
+        margin-top: auto;
+
+        @media screen and (max-width: $breakpoint768) {
+            font-size: 16px;
+            height: 40px;
+            padding: 7px 7px 7px 18px;
+
+            .btn__arrow {
+                width: 26px;
+                height: 26px;
+            }
+        }
+    }
+
+    hr {
+        border: none;
+        outline: none;
+        height: 1px;
+        background-color: #E7F0F8;
+        margin-top: 30px;
+        margin-bottom: 40px;
+
+        @media screen and (max-width: $breakpoint1200) {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+}
