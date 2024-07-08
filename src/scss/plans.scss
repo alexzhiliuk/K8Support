@@ -19,12 +19,12 @@
     flex-direction: column;
 
     border-radius: 20px;
-    border: 2px solid #E7F0F8;
+    outline: 2px solid #E7F0F8;
     padding: 25px 40px 50px;
 
-    &_blue {
+    &_blue, &:hover {
         background: $gradientSecondary1;
-        border: unset;
+        outline: unset;
 
         .plan {
 

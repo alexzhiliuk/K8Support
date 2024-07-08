@@ -1266,33 +1266,33 @@ button {
   display: flex;
   flex-direction: column;
   border-radius: 20px;
-  border: 2px solid #E7F0F8;
+  outline: 2px solid #E7F0F8;
   padding: 25px 40px 50px;
 }
-.plan_blue {
+.plan_blue, .plan:hover {
   background: linear-gradient(180deg, #4CB0F9 0%, #326DE6 100%);
-  border: unset;
+  outline: unset;
 }
-.plan_blue .plan__title {
+.plan_blue .plan__title, .plan:hover .plan__title {
   color: #FFFFFF;
 }
-.plan_blue .plan__text {
-  color: #FFFFFF;
-  opacity: 0.75;
-}
-.plan_blue .plan__list {
+.plan_blue .plan__text, .plan:hover .plan__text {
   color: #FFFFFF;
   opacity: 0.75;
 }
-.plan_blue .plan__btn {
+.plan_blue .plan__list, .plan:hover .plan__list {
+  color: #FFFFFF;
+  opacity: 0.75;
+}
+.plan_blue .plan__btn, .plan:hover .plan__btn {
   background: #FFFFFF;
   border-color: #FFFFFF;
 }
-.plan_blue .plan__btn:hover, .plan_blue .plan__btn:active {
+.plan_blue .plan__btn:hover, .plan_blue .plan__btn:active, .plan:hover .plan__btn:hover, .plan:hover .plan__btn:active {
   background: linear-gradient(180deg, #FF9243 0%, #FF7C1D 100%);
   border-color: #FF9243;
 }
-.plan_blue.plan hr {
+.plan_blue.plan hr, .plan:hover.plan hr {
   background-color: rgba(231, 240, 248, 0.15);
 }
 @media screen and (max-width: 1199.98px) {
