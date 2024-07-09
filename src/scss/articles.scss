@@ -263,3 +263,15 @@
     border-bottom: 1px solid #D7E3ED;
 }
 
+
+.section_bg {
+    overflow: hidden;
+    .articles {
+        &_slider {
+            width: calc(100% + 65px * 2);
+
+            margin: 0 -65px;
+            padding: 0 65px;
+        }
+    }
+}

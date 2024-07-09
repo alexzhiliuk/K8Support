@@ -1689,6 +1689,15 @@ button {
   border-bottom: 1px solid #D7E3ED;
 }
 
+.section_bg {
+  overflow: hidden;
+}
+.section_bg .articles_slider {
+  width: calc(100% + 130px);
+  margin: 0 -65px;
+  padding: 0 65px;
+}
+
 .support-section {
   background: linear-gradient(106.29deg, #224FAA 15.91%, #214286 98.38%);
   position: relative;
@@ -1952,6 +1961,15 @@ button {
 .articles-section {
   padding-bottom: clamp(50px, 13vw, 130px);
   border-bottom: 1px solid #D7E3ED;
+}
+
+.section_bg {
+  overflow: hidden;
+}
+.section_bg .articles_slider {
+  width: calc(100% + 130px);
+  margin: 0 -65px;
+  padding: 0 65px;
 }
 
 .hero {
