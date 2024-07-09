@@ -51,6 +51,11 @@ main {
     @media screen and (max-width: $breakpoint576) {
         padding-top: 64px;
     }
+
+    & .section:last-of-type,
+    & > :last-child {
+        margin-bottom: 0;
+    }
 }
 
 ul {

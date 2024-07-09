@@ -1,6 +1,6 @@
 .social {
-    height: 40px;
-    width: 40px;
+    height: clamp(40px, 4.6vw, 46px);
+    width: clamp(40px, 4.6vw, 46px);
     border-radius: 50%;
 
     display: flex;
@@ -8,5 +8,21 @@
     justify-content: center;
 
     border: 2px solid $colorSecondary2;
+
+    svg {
+        height: 33%;
+        width: auto;
+    }
+
+    &:hover {
+        background: $gradientPrimary;
+        border: none;
+
+        svg {
+            path {
+                fill: $colorPrimary3;
+            }
+        }
+    }
 
 }
