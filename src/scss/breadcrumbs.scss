@@ -1,0 +1,24 @@
+.breadcrumbs {
+
+    
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.57;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $colorPrimary3;
+    opacity: 0.6;
+    pointer-events: none;
+
+
+    // .breadcrumbs__item
+    &__item {
+        pointer-events: all;
+
+        &:hover {
+            color: $colorSecondary2;
+        }
+    }
+}
