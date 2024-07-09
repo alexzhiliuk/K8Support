@@ -11,7 +11,7 @@
         flex-wrap: nowrap;
         width: 100vw;
         max-width: calc($conteinerWidth + 2 * $containerPadding);
-        margin: 0 -$containerPadding;
+        margin: 0 (-$containerPadding);
         padding: 0 $containerPadding;
         overflow-x: auto;
         

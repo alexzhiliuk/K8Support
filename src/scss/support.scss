@@ -1,0 +1,45 @@
+.support-section {
+    background: linear-gradient(106.29deg, #224FAA 15.91%, #214286 98.38%);
+
+    @media screen and (max-width: $breakpoint768) {
+        padding-bottom: 50px;
+    }
+
+    position: relative;
+    overflow: hidden;
+    &__img {
+        
+        z-index: -1;
+        pointer-events: none;
+        position: absolute;
+        bottom: 0; 
+        right: 0;
+
+        max-width: 866px;
+        width: 100%;
+        translate: 33% 30%;
+        
+        img {
+            width: 100%;
+        }
+    }
+
+    .section {
+        &__title {
+            color: $colorPrimary3;
+            background: unset;
+            -webkit-background-clip: unset;
+            -webkit-text-fill-color: unset;
+            background-clip: unset;
+            text-fill-color: unset;
+        }
+        &__subtitle {
+            color: $colorPrimary3;
+            opacity: .75;
+        }
+        &__text {
+            color: $colorPrimary3;
+            opacity: .75;
+        }
+    }
+}

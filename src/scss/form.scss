@@ -1,0 +1,140 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    
+
+    // .form__row
+    &__row {
+        max-width: 812px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+
+        @media screen and (max-width: $breakpoint576) {
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        // .form__row_submit
+        &_submit {
+            justify-content: center;
+
+            .btn {
+                background: $colorPrimary3;
+                border-color: $colorPrimary3;
+
+                &:hover,
+                &:active {
+                    background: $gradientPrimary;
+                    border-color: $orange;
+                }
+
+                @media screen and (max-width: $breakpoint576) {
+                    max-width: fit-content;
+                }
+
+            }
+
+            @media screen and (min-width: $breakpoint576) {
+                margin-top: 15px;
+            }
+        }
+    }
+
+    // .form__input
+    &__input {
+        display: flex;
+        flex-direction: column-reverse;
+        flex: 0 1 370px;
+        position: relative;
+
+        @media screen and (max-width: $breakpoint576) {
+            flex: unset;
+        }
+
+        label {
+
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #FFFFFF;
+
+            margin-bottom: 9px;
+
+            @media screen and (max-width: $breakpoint576) {
+                margin-bottom: 0;
+            }
+
+        }
+
+        input {
+            width: 100%;
+            font-style: normal;
+            font-weight: 400;
+            font-size: clamp(16px, 1.8vw, 18px);
+            line-height: 1.67;
+            color: $colorPrimary3;
+            
+            background: none;
+            padding: 6px 0;
+            border-bottom: 1px solid rgba($color: $colorPrimary3, $alpha: .25);
+
+
+            &::placeholder {
+                color: #6474B5;
+                opacity: 0.75;
+            }
+
+            &:focus-visible {
+                border-bottom-width: 2px;
+                padding-bottom: 5px;
+
+                & + label {
+                    opacity: .6;
+                }
+            }
+            
+            &:not(:placeholder-shown) {
+                & + label {
+                    opacity: .6;
+                }
+            }
+
+        }
+
+        &_invalid {
+            input {
+                border-bottom-color: #FF8831;
+            }
+        }
+    }
+
+    // .form__error
+    &__error {
+        padding-top: 10px;
+        position: absolute;
+        left: 0;
+        top: 100%;
+
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 179%;
+        color: #FF8831;
+
+        @media screen and (max-width: $breakpoint576) {
+            padding-top: 5px;
+        }
+
+    }
+}
