@@ -95,6 +95,11 @@
         flex-wrap: wrap;
     }
 
+    // .section__tags
+    &__tags {
+        margin-top: clamp(20px, 4vw, 40px);
+    }
+
     // .section__body
     &__body {
         margin-top: clamp(30px, 6vw, 60px);

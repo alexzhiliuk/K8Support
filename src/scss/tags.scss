@@ -1,0 +1,59 @@
+.tags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    @media screen and (max-width: $breakpoint768) {
+        flex-wrap: nowrap;
+        gap: 10px;
+
+        width: 100vw;
+        max-width: calc($conteinerWidth + 2 * $containerPadding);
+        margin-left: (-$containerPadding);
+        margin-right: (-$containerPadding);
+        padding: 2px $containerPadding;
+        overflow-x: auto;
+        overflow-y: hidden;
+        
+        scrollbar-width: 0;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
+
+.tag {
+
+    @include tagTypo;
+    color: $colorPrimary2;
+    padding: 10px 15px;
+    border-radius: 30px;
+    background: rgba($color: $colorSecondary2, $alpha: .5);
+    cursor: pointer;
+    flex-shrink: 0;
+
+    span {
+        opacity: .5;
+    }
+
+    // .tag_active
+    &_active {
+        background: $gradientPrimary;
+        font-weight: 700;
+        color: $colorPrimary3;
+
+        span {
+            opacity: 1;
+        }
+    }
+
+    // .tag_outline
+    &_outline {
+        outline: 2px solid rgba($color: $colorSecondary2, $alpha: .5);
+        background: none;
+        span {
+            opacity: .75;
+        }
+    }
+}

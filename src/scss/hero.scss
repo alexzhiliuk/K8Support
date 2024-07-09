@@ -78,7 +78,7 @@
     &_blog {
 
         overflow: visible;
-        margin-bottom: 200px;
+        margin-bottom: clamp(230px, 28vw, 280px);
 
         .hero__stars {
             z-index: 0;

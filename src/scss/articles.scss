@@ -7,6 +7,27 @@
         flex: 0 0 calc(33.33% - 40px * 2 / 3);
     }
 
+    @media screen and (max-width: $breakpoint1200) {
+        gap: 20px;
+
+        & > * {
+            flex: 0 0 calc(33.33% - 20px * 2 / 3);
+        }
+    }
+
+    @media screen and (max-width: $breakpoint768) {
+        & > * {
+            flex: 0 0 calc(50% - 20px / 2);
+        }
+    }
+    @media screen and (max-width: $breakpoint480) {
+        gap: 30px;
+        & > * {
+            flex: 0 0 100%;
+        }
+    }
+    
+
     &_slider {
         flex-wrap: nowrap;
         width: 100vw;
@@ -148,5 +169,97 @@
             margin-top: 8px;
         }
     }
+}
+
+.articles-filter {
+
+    padding: 7px 32px 7px 7px;
+    outline: 2px solid $colorSecondary2;
+    border-radius: 100px;
+    
+    cursor: pointer;
+    position: relative;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+
+    @media screen and (max-width: $breakpoint576) {
+        gap: 5px;
+        outline: none;
+        padding: 7px 20px 7px 7px;
+    }
+
+    @include mainText;
+
+    // .articles-filter__action
+    &__action {
+        color: $colorSecondary3;
+        background: $colorSecondary2;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 6px 12px;
+        border-radius: 100px;
+
+        @media screen and (max-width: $breakpoint576) {
+            background: none;
+            padding: 0;
+        }
+    }
+
+    // .articles-filter__value
+    &__value {
+        color: $colorPrimary2;
+
+        position: relative;
+        &::after {
+            content: url(../img/blog/filter-arrow.svg);
+            display: flex;
+            height: 4px;
+            position: absolute;
+            top: 0;
+            left: calc(100% + 7px);
+            translate: 0 -50%;
+        }
+    }
+
+    .droplist {
+        position: absolute;
+        top: calc(100% + 10px);
+        right: 0;
+        min-width: 100%;
+        width: max-content;
+        background: $colorSecondary1;
+        z-index: 1;
+
+        border-radius: 12px;
+        border: 2px solid $colorSecondary2;
+
+        display: none;
+        flex-direction: column;
+
+        span {
+            cursor: pointer;
+            padding: 10px;
+
+            &:hover {
+                background: $colorSecondary2;
+            }
+        }
+    }
+
+    &_active {
+        .droplist {
+            display: flex;
+        }
+    }
+}
+
+.articles-section {
+    padding-bottom: clamp(50px, 13vw, 130px);
+    border-bottom: 1px solid #D7E3ED;
 }
 
