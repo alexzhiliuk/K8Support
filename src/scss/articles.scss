@@ -29,12 +29,13 @@
     
 
     &_slider {
-        flex-wrap: nowrap;
+        // flex-wrap: nowrap;
         width: 100vw;
         max-width: calc($conteinerWidth + 2 * $containerPadding);
         margin: 0 (-$containerPadding);
         padding: 0 $containerPadding;
-        overflow-x: auto;
+        // overflow-x: auto;
+        display: block;
         
         scrollbar-width: 0;
         &::-webkit-scrollbar {
@@ -263,6 +264,26 @@
     border-bottom: 1px solid #D7E3ED;
 }
 
+
+.articles-slider-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: $colorSecondary2;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: $orange;
+    }
+}
 
 .section_bg {
     overflow: hidden;

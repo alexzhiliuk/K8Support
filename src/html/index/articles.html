@@ -15,64 +15,94 @@
             </div>
         </div>
         <div class="section__body">
-            <div class="articles articles_slider">
-                <a href="#" class="article-card">
-                    <div class="article-card__cover">
-                        <div class="article-card__tags">
-                            <div class="article-card__tag">Challenges</div>
-                        </div>
-                        <img src="@img/articles/cover-1.png" alt="">
+            <div class="articles articles_slider swiper" id="articlesSlider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#" class="article-card">
+                            <div class="article-card__cover">
+                                <div class="article-card__tags">
+                                    <div class="article-card__tag">Challenges</div>
+                                </div>
+                                <img src="@img/articles/cover-1.png" alt="">
+                            </div>
+                            <div class="article-card__info">
+                                <div class="article-card__info-item">
+                                    <img src="@img/articles/date-icon.svg" alt="">
+                                    <span>30 Apr 2024</span>                           
+                                </div>
+                                <div class="article-card__info-item">
+                                    <img src="@img/articles/author-icon.svg" alt="">                              
+                                    <span>by Elroi Marom</span>
+                                </div>
+                            </div>
+                            <h4 class="article-card__title h4">Top 3 Kubernetes Challenges for Beginners</h4>
+                        </a>
                     </div>
-                    <div class="article-card__info">
-                        <div class="article-card__info-item">
-                            <img src="@img/articles/date-icon.svg" alt="">
-                            <span>30 Apr 2024</span>                           
-                        </div>
-                        <div class="article-card__info-item">
-                            <img src="@img/articles/author-icon.svg" alt="">                              
-                            <span>by Elroi Marom</span>
-                        </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="article-card">
+                            <div class="article-card__cover">
+                                <div class="article-card__tags">
+                                    <div class="article-card__tag">Microservice</div>
+                                </div>
+                                <img src="@img/articles/cover-2.png" alt="">
+                            </div>
+                            <div class="article-card__info">
+                                <div class="article-card__info-item">
+                                    <img src="@img/articles/date-icon.svg" alt="">
+                                    <span>28 Feb 2024</span>                           
+                                </div>
+                                <div class="article-card__info-item">
+                                    <img src="@img/articles/author-icon.svg" alt="">                              
+                                    <span>by Netanel</span>
+                                </div>
+                            </div>
+                            <h4 class="article-card__title h4">How To Manage Microservices With Dockers and Git</h4>
+                        </a>
                     </div>
-                    <h4 class="article-card__title h4">Top 3 Kubernetes Challenges for Beginners</h4>
-                </a>
-                <a href="#" class="article-card">
-                    <div class="article-card__cover">
-                        <div class="article-card__tags">
-                            <div class="article-card__tag">Microservice</div>
-                        </div>
-                        <img src="@img/articles/cover-2.png" alt="">
+                    <div class="swiper-slide">
+                        <a href="#" class="article-card">
+                            <div class="article-card__cover">
+                                <div class="article-card__tags">
+                                    <div class="article-card__tag">Support</div>
+                                </div>
+                                <img src="@img/articles/cover-3.png" alt="">
+                            </div>
+                            <div class="article-card__info">
+                                <div class="article-card__info-item">
+                                    <img src="@img/articles/date-icon.svg" alt="">
+                                    <span>10 Feb 2024</span>                           
+                                </div>
+                                <div class="article-card__info-item">
+                                    <img src="@img/articles/author-icon.svg" alt="">                              
+                                    <span>by Netanel</span>
+                                </div>
+                            </div>
+                            <h4 class="article-card__title h4">Deep-Edge With k3s and Rancher (Part 1)</h4>
+                        </a>
                     </div>
-                    <div class="article-card__info">
-                        <div class="article-card__info-item">
-                            <img src="@img/articles/date-icon.svg" alt="">
-                            <span>28 Feb 2024</span>                           
-                        </div>
-                        <div class="article-card__info-item">
-                            <img src="@img/articles/author-icon.svg" alt="">                              
-                            <span>by Netanel</span>
-                        </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="article-card">
+                            <div class="article-card__cover">
+                                <div class="article-card__tags">
+                                    <div class="article-card__tag">Support</div>
+                                </div>
+                                <img src="@img/articles/cover-3.png" alt="">
+                            </div>
+                            <div class="article-card__info">
+                                <div class="article-card__info-item">
+                                    <img src="@img/articles/date-icon.svg" alt="">
+                                    <span>10 Feb 2024</span>                           
+                                </div>
+                                <div class="article-card__info-item">
+                                    <img src="@img/articles/author-icon.svg" alt="">                              
+                                    <span>by Netanel</span>
+                                </div>
+                            </div>
+                            <h4 class="article-card__title h4">Deep-Edge With k3s and Rancher (Part 1)</h4>
+                        </a>
                     </div>
-                    <h4 class="article-card__title h4">How To Manage Microservices With Dockers and Git</h4>
-                </a>
-                <a href="#" class="article-card">
-                    <div class="article-card__cover">
-                        <div class="article-card__tags">
-                            <div class="article-card__tag">Support</div>
-                        </div>
-                        <img src="@img/articles/cover-3.png" alt="">
-                    </div>
-                    <div class="article-card__info">
-                        <div class="article-card__info-item">
-                            <img src="@img/articles/date-icon.svg" alt="">
-                            <span>10 Feb 2024</span>                           
-                        </div>
-                        <div class="article-card__info-item">
-                            <img src="@img/articles/author-icon.svg" alt="">                              
-                            <span>by Netanel</span>
-                        </div>
-                    </div>
-                    <h4 class="article-card__title h4">Deep-Edge With k3s and Rancher (Part 1)</h4>
-                </a>
+                </div>
+                <div class="articles-slider-pagination" id="articlesSliderPagination"></div>
             </div>
         </div>
     </div>
