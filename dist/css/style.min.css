@@ -638,7 +638,7 @@ button {
 .section__header_centered {
   text-align: center;
 }
-.section__subtitle {
+.section__subtitle, .popup__subtitle {
   font-style: normal;
   font-weight: 500;
   font-size: clamp(12px, 1.4vw, 14px);
@@ -648,14 +648,14 @@ button {
   color: #57659D;
   margin-bottom: 8px;
 }
-.section__title {
+.section__title, .popup__title {
   background: linear-gradient(90deg, #1F317D 2.9%, #375DAA 98.95%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
 }
-.section__text {
+.section__text, .popup__text {
   font-style: normal;
   font-weight: 500;
   font-size: clamp(14px, 1.8vw, 18px);
@@ -1741,7 +1741,7 @@ button {
 .support-section__img img {
   width: 100%;
 }
-.support-section .section__title {
+.support-section .section__title, .support-section .popup__title {
   color: #FFFFFF;
   background: unset;
   -webkit-background-clip: unset;
@@ -1749,11 +1749,11 @@ button {
   background-clip: unset;
   text-fill-color: unset;
 }
-.support-section .section__subtitle {
+.support-section .section__subtitle, .support-section .popup__subtitle {
   color: #FFFFFF;
   opacity: 0.75;
 }
-.support-section .section__text {
+.support-section .section__text, .support-section .popup__text {
   color: #FFFFFF;
   opacity: 0.75;
 }
@@ -2598,6 +2598,77 @@ button {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+.popup::-webkit-scrollbar {
+  display: none;
+}
+.popup__inner {
+  background: linear-gradient(180deg, #224FAA 0%, #214286 100%);
+  border-radius: 30px;
+  padding: 60px 30px;
+  max-width: 1000px;
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+@media screen and (max-width: 767.98px) {
+  .popup__inner {
+    padding: 35px 15px 15px;
+    border-radius: 20px;
+  }
+}
+.popup__close {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -30px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+@media screen and (max-width: 767.98px) {
+  .popup__close {
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+}
+.popup__header {
+  text-align: center;
+}
+.popup__subtitle {
+  color: #FFFFFF;
+  opacity: 0.75;
+  text-transform: uppercase;
+}
+.popup__title {
+  color: #FFFFFF;
+  background: unset;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  background-clip: unset;
+  text-fill-color: unset;
+}
+.popup__text {
+  color: #FFFFFF;
+  opacity: 0.75;
+}
+.popup__body {
+  margin-top: 40px;
 }
 
 @font-face {
